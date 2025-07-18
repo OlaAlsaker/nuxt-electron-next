@@ -1,0 +1,57 @@
+{
+  "name": "nuxt-electron-next",
+  "version": "0.1.0",
+  "description": "Use Electron with Nuxt 4",
+  "main": "./dist/index.cjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./*": "./*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OlaAlsaker/nuxt-electron-next.git"
+  },
+  "author": "Ola Alsaker <ola.alsaker@appex.no>",
+  "license": "MIT",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build --watch",
+    "types": "tsc -p tsconfig.build.json",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "vite-plugin-electron": "*",
+    "vite-plugin-electron-renderer": "*"
+  },
+  "peerDependenciesMeta": {
+    "vite-plugin-electron-renderer": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^22.6.0",
+    "compare-versions": "^6.1.1",
+    "electron": "^37.2.3",
+    "esbuild": "^0.25.6",
+    "nuxt": "^4.0.0",
+    "typescript": "^5.8.3",
+    "vite": "^7.0.5",
+    "vite-plugin-electron": "^0.29.0",
+    "vite-plugin-electron-renderer": "^0.14.6"
+  },
+  "files": [
+    "electron-env.d.ts",
+    "dist"
+  ],
+  "keywords": [
+    "nuxt",
+    "plugin",
+    "module",
+    "electron"
+  ]
+}

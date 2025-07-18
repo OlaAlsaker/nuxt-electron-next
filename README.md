@@ -11,7 +11,8 @@
 
 > Integrate Nuxt 4 and Electron
 
-This is a fork of [nuxt-electron](https://github.com/caoxiemeihao/nuxt-electron) that is updated to work with Nuxt 4.
+> [!NOTE]
+> **This is a fork of [nuxt-electron](https://github.com/caoxiemeihao/nuxt-electron) that is updated to work with Nuxt 4.**
 
 ## Features
 
@@ -21,30 +22,25 @@ This is a fork of [nuxt-electron](https://github.com/caoxiemeihao/nuxt-electron)
 
 ## Quick Setup
 
-1. Add `electron` module to project
 
-```sh
-npx nuxi module add electron
-```
-
-2. Add the following dependency to your project
+1. Install the package and the following dependencies to your project
 
 ```sh
 # Using pnpm
-pnpm add -D vite-plugin-electron vite-plugin-electron-renderer electron electron-builder
+pnpm add -D nuxt-electron-next vite-plugin-electron vite-plugin-electron-renderer electron electron-builder
 
 # Using yarn
-yarn add --dev vite-plugin-electron vite-plugin-electron-renderer electron electron-builder
+yarn add --dev nuxt-electron-next vite-plugin-electron vite-plugin-electron-renderer electron electron-builder
 
 # Using npm
-npm install --save-dev vite-plugin-electron vite-plugin-electron-renderer electron electron-builder
+npm install --save-dev nuxt-electron-next vite-plugin-electron vite-plugin-electron-renderer electron electron-builder
 ```
 
-3. Add `electron` and related config to `nuxt.config.ts`
+2. Update your `nuxt.config.ts`
 
 ```ts
 export default defineNuxtConfig({
-  ...
+  modules: ['nuxt-electron-next'],
   electron: {
     build: [
       {
@@ -58,7 +54,7 @@ export default defineNuxtConfig({
 })
 ```
 
-4. Create the `electron/main.ts` file and type the following code
+3. Create the `electron/main.ts` file and type the following code
 
 ```ts
 import { app, BrowserWindow } from 'electron'
@@ -68,7 +64,7 @@ app.whenReady().then(() => {
 })
 ```
 
-5. Add the `main` entry to `package.json`
+4. Add the `main` entry to `package.json`
 
 ```diff
 {
@@ -170,13 +166,3 @@ export interface ElectronOptions {
 By default, we force the App to run in SPA mode since we don't need SSR for desktop apps
 
 If you want to fully customize the default behavior, you can disable it by `disableDefaultOptions`
-
-<!-- Badges -->
-[npm-version-src]: https://img.shields.io/npm/v/nuxt-electron/latest.svg?style=flat&colorA=18181B&colorB=28CF8D
-[npm-version-href]: https://npmjs.com/package/nuxt-electron
-
-[npm-downloads-src]: https://img.shields.io/npm/dm/nuxt-electron.svg?style=flat&colorA=18181B&colorB=28CF8D
-[npm-downloads-href]: https://npmjs.com/package/nuxt-electron
-
-[license-src]: https://img.shields.io/npm/l/nuxt-electron.svg?style=flat&colorA=18181B&colorB=28CF8D
-[license-href]: https://npmjs.com/package/nuxt-electron

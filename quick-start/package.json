@@ -1,0 +1,25 @@
+{
+  "name": "nuxt-electron-next-quick-start",
+  "version": "0.0.0",
+  "private": true,
+  "author": "Ola Alsaker <ola.alsaker@appex.no>",
+  "license": "MIT",
+  "main": "dist-electron/main.js",
+  "scripts": {
+    "dev": "cross-env NUXT_SOCKET=0 nuxi dev --no-fork",
+    "build": "nuxi build --prerender && electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^37.2.3",
+    "electron-builder": "^26.0.12",
+    "nuxt": "^4.0.0",
+    "nuxt-electron-next": "file:../",
+    "vite-plugin-electron": "^0.29.0",
+    "vite-plugin-electron-renderer": "^0.14.6",
+    "vue": "^3.5.17",
+    "vue-router": "^4.5.1"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3"
+  }
+}
