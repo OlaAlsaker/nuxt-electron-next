@@ -4,12 +4,7 @@
 
 # Nuxt Electron (Next)
 
-[![npm version][npm-version-src]][npm-version-href]
-[![npm downloads][npm-downloads-src]][npm-downloads-href]
-[![License][license-src]][license-href]
-[<img src="https://api.gitsponsors.com/api/badge/img?id=564125759" height="20">](https://api.gitsponsors.com/api/badge/link?p=Mz9rvcT08fgHJXo5KS+hQ96a91PyIlbKcr11rzON3xux6OXDlmkpEtfDd/XpYlsw)
-
-> Integrate Nuxt 4 and Electron
+Integrate Nuxt 4 and Electron
 
 > [!NOTE]
 > **This is a fork of [nuxt-electron](https://github.com/caoxiemeihao/nuxt-electron) that is updated to work with Nuxt 4.**
